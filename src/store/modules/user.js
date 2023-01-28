@@ -20,12 +20,13 @@ const mutations = {
   // SET_NAME: (state, name) => {
   //   state.name = name;
   // },
-  SET_AVATAR: (state, avatar) => {
-    state.avatar =
-      "http://localhost:7001/static/upload/2023-1-26-14-13-11-463-0c666.jpg";
-  },
+  // SET_AVATAR: (state, avatar) => {
+  //   state.avatar =
+  //     "/static/upload/2023-1-26-14-13-11-463-0c666.jpg";
+  // },
   SET_USER: (state, payload) => {
     state.user = payload;
+    state.avatar = "/static/upload/2023-1-26-14-13-11-463-0c666.jpg";
   },
 };
 

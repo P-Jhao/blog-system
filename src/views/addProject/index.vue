@@ -106,8 +106,7 @@ export default {
           this.data.description.push(this.data.description3);
         }
         this.data.order = parseInt(this.data.order);
-        addProject(this.data).then((res) => {
-          console.log(res);
+        addProject(this.data).then(() => {
           this.$message.success("项目发布成功");
           this.$router.push("/projectList");
         });

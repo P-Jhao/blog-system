@@ -91,7 +91,6 @@ export default {
   methods: {
     fetchData() {
       getInfo().then(({ data }) => {
-        console.log(data);
         this.adminInfo.name = data.name;
       });
     },
