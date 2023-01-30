@@ -108,9 +108,9 @@ export default {
       })
         .then(() => {
           deleteMessage(id).then(() => {
-            const maxPage = data.total / limit;
-            if (maxPage < currentPage) {
-              currentPage = maxPage;
+            const maxPage = this.data.total / this.limit;
+            if (maxPage < this.currentPage) {
+              this.currentPage = maxPage;
             }
             this.fetchData();
             this.$message({

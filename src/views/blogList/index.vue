@@ -14,7 +14,7 @@
         }}</template>
       </el-table-column>
 
-      <el-table-column prop="title" label="文章名称" width="100" align="center">
+      <el-table-column prop="title" label="文章名称" width="200" align="center">
         <template slot-scope="scope"
           ><el-popover
             placement="top-start"
@@ -39,7 +39,7 @@
         >
       </el-table-column>
 
-      <el-table-column prop="title" label="文章描述" width="200" align="center">
+      <el-table-column prop="title" label="文章描述" align="center">
         <template slot-scope="scope">{{ scope.row.description }}</template>
       </el-table-column>
 
@@ -63,7 +63,7 @@
         }}</template>
       </el-table-column>
 
-      <el-table-column label="操作" align="center">
+      <el-table-column label="操作" align="center" width="100">
         <template slot-scope="scope">
           <el-tooltip
             class="item"
