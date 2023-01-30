@@ -135,7 +135,7 @@ export default {
           arr[i] = this.form;
         }
       }
-      setBanner(arr).then((res) => {
+      setBanner(arr).then(() => {
         this.dialogFormVisible = false;
         this.$message({
           message: "修改成功",

@@ -105,7 +105,9 @@ export default {
     };
   },
   created() {
-    this.fetchData();
+    this.fetchData().then(() => {
+      console.log(this.data.rows);
+    });
   },
   methods: {
     formatDate,
@@ -125,12 +127,12 @@ export default {
         type: "warning",
       })
         .then(() => {
-          deleteComment(id).then(() => {
-            const maxPage = data.total / limit;
-            if (maxPage < currentPage) {
-              currentPage = maxPage;
+          deleteComment(id).then(async () => {
+            const maxPage = this.data.total / this.limit;
+            if (maxPage < this.currentPage) {
+              this.currentPage = maxPage;
             }
-            this.fetchData();
+            await this.fetchData();
             this.$message({
               type: "success",
               message: "删除成功!",

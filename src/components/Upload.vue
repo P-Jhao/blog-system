@@ -10,14 +10,14 @@
       :on-success="handleAvatarSuccess"
       :show-file-list="false"
     >
-      <img v-if="value" :src="imgUrl" class="avatar" />
+      <img v-if="value" :src="value" class="avatar" />
       <i v-else class="el-icon-plus avatar-uploader-icon"></i>
     </el-upload>
   </div>
 </template>
 
 <script>
-import { server_URL } from "@/urlConfig";
+// import { server_URL } from "@/urlConfig";
 export default {
   props: ["uploadTitle", "value"],
   methods: {
@@ -34,9 +34,9 @@ export default {
         Authorization: "Bearer " + localStorage.getItem("adminToken"),
       };
     },
-    imgUrl() {
-      return server_URL + this.value;
-    },
+    // imgUrl() {
+    //   return server_URL + this.value;
+    // },
   },
 };
 </script>
