@@ -105,9 +105,7 @@ export default {
     };
   },
   created() {
-    this.fetchData().then(() => {
-      console.log(this.data.rows);
-    });
+    this.fetchData();
   },
   methods: {
     formatDate,
