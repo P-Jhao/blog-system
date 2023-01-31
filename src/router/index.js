@@ -176,6 +176,23 @@ export const constantRoutes = [
   },
 
   {
+    path: "/upImg",
+    component: Layout,
+    children: [
+      {
+        path: "upImg",
+        name: "UpImg",
+        component: () => import("@/views/upImg"),
+        meta: {
+          title: "上传图片",
+          icon: "el-icon-picture-outline",
+          auth: true,
+        },
+      },
+    ],
+  },
+
+  {
     path: "/control",
     component: Layout,
     children: [
